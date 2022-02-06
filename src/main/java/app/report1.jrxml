@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c2ff9f9e-e5ed-4248-a200-fadc0b3b4e19">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from message]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="message_number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="letter_attachments" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="subject" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="destination" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="is_urgent" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="send_method" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="isOpened" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="id_1" class="java.lang.Integer" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{id}]]></variableExpression>
+	</variable>
+	<variable name="id_2" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{id}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="149" y="10" width="257" height="56" uuid="69160f4c-83e7-49fa-9954-c386e32b5aae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[مراســـــلة]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="15" width="100" height="20" uuid="089fe406-bbe6-4b11-bcf9-69ad4e49d27b"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="17" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="219" splitType="Stretch">
+			<staticText>
+				<reportElement x="472" y="9" width="74" height="20" uuid="29b4b056-ae4e-4781-8106-4a5e202851a7"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الرقم التسلسلي]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="9" width="100" height="20" uuid="0a00efd5-b28e-40d1-8d27-008e6f11ccba"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="472" y="39" width="74" height="20" uuid="e7d61e39-1e62-46ef-8cd1-c6c043802482"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[نمرة المراسلة]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="38" width="100" height="20" uuid="de0d4a22-2ab2-4a8d-9a1c-5f971bfb3e46"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{message_number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="472" y="65" width="74" height="20" uuid="6341753b-5663-49cd-83e4-3ad62a87609b"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[المرفقات]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="65" width="100" height="20" uuid="fccc63fd-0f2f-4688-ac58-f00591070624"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{letter_attachments}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="472" y="91" width="74" height="20" uuid="53bd19c0-f14a-4f08-a6a3-ad2d6f14f1b5"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[النوع]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="91" width="100" height="20" uuid="3ab1c6db-2f79-4cb4-a19f-3d887e7f50a1"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="472" y="119" width="74" height="20" uuid="741cd263-6b09-4c9e-98b4-9f30e5440781"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الموضوع]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="119" width="100" height="20" uuid="e7c36ffd-b87b-4f26-a7dd-2532d1db0981"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="472" y="147" width="74" height="20" uuid="06539ed7-5c0a-4c41-ab63-7015a896bbd4"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[الوجهة]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="147" width="100" height="20" uuid="db9c11a8-c117-4ac4-9e01-fdcc82c23b0b"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{destination}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="472" y="175" width="74" height="20" uuid="e42b6b21-6332-4353-af2f-4df9a0db7751"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[طريقة الإرسال]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="175" width="100" height="20" uuid="41b04d7f-a208-4bc4-8b08-6e98d8ffff99"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{send_method}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="34" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
